@@ -33,9 +33,9 @@ const resolveMessageVariant = (senderId, currentUserId) => {
       <!-- Message Content -->
       <template #item.content="{ item }">
         <div class="d-flex align-center">
-          <v-chip :color="resolveMessageVariant(item.sender, currentUserId)" size="small">
-           <p>Contend Encrypted 😌</p>
-          </v-chip>
+            <v-chip :color="resolveMessageVariant(item.sender, currentUserId)" size="small">
+            <p>Content Encrypted Please Use Decrypt System <a href="http://localhost:3050/" target="_blank">http://localhost:3050/</a>😌</p>
+            </v-chip>
         </div>
       </template>
 
