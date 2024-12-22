@@ -1,47 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <!-- Inbox (top section) -->
-      <v-col cols="5">
-        <v-card class="mb-3 bg-card" elevation="2">
-          <v-card-title>
-            <div class="headline text-center">Available Users</div>
-          </v-card-title>
-          <v-list>
-            <v-list-item-group v-if="filteredUsers.length > 0">
-              <v-list-item
-                v-for="user in filteredUsers"
-                :key="user.id"
-                @click="selectReceiver(user)"
-                class="my-2 ps-8"
-                :class="{
-                  'selected-user':
-                    selectedReceiver && selectedReceiver.id === user.id,
-                }"
-              >
-                <v-list-item-content>
-                  <v-list-item-title class="py-2">
-                    <v-avatar image="@/assets/images/user1.png"></v-avatar>
-                    <span class="text-h6 ms-3">{{ user.name }}</span>
-                  </v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-item-group>
-            <v-list-item v-else>
-              <v-list-item-content>
-                <v-list-item-title
-                  >No conversations available...</v-list-item-title
-                >
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row justify="center">
-      <!-- Chat Box (bottom section) -->
-      <v-col cols="8">
+      <v-col cols="9">
         <v-card v-if="selectedReceiver" class="pa-6 bg-card" elevation="2">
           <v-card-title>
             <div>
@@ -102,7 +62,46 @@
           </v-card-subtitle>
         </v-card>
       </v-col>
+      <!-- Inbox (top section) -->
+      <v-col cols="3">
+        <v-card class="mb-3 bg-card" elevation="2">
+          <v-card-title>
+            <div class="headline text-center">Available Users</div>
+          </v-card-title>
+          <v-list>
+            <v-list-item-group v-if="filteredUsers.length > 0">
+              <v-list-item
+                v-for="user in filteredUsers"
+                :key="user.id"
+                @click="selectReceiver(user)"
+                class="my-2 ps-8"
+                :class="{
+                  'selected-user':
+                    selectedReceiver && selectedReceiver.id === user.id,
+                }"
+              >
+                <v-list-item-content>
+                  <v-list-item-title class="py-2">
+                    <v-avatar image="@/assets/images/user1.png"></v-avatar>
+                    <span class="text-h6 ms-3">{{ user.name }}</span>
+                  </v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list-item-group>
+            <v-list-item v-else>
+              <v-list-item-content>
+                <v-list-item-title
+                  >No conversations available...</v-list-item-title
+                >
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+     
     </v-row>
+
+    
   </v-container>
 </template>
 
