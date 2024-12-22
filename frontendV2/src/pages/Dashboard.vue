@@ -1,7 +1,7 @@
 <template>
   <v-app class="app-container">
     <!-- Top Navigation Bar -->
-    <v-app-bar app color="#151515" class="px-5">
+    <v-app-bar app color="#EEEEEE" class="px-5">
       <!-- App Title -->
       <v-toolbar-title class="text-h5 font-weight-black"
         >Receiver</v-toolbar-title
@@ -79,8 +79,15 @@
     <!-- Main Content -->
     <v-main class="custom-main">
       <v-container fluid class="main-container pa-8 rounded-lg">
-        <v-row justify="center" v-if="activeTab === 'dashboard'" class="mb-4">
-          <v-col cols="3">
+        <v-row v-if="activeTab === 'dashboard'" class="mb-4">
+          <v-col cols="12" md="9">
+           
+              <v-col cols="12" lg="12" >
+                <UserTable :userData="users" />
+              </v-col>
+          
+          </v-col>
+          <v-col cols="6" md="3">
             <v-card class="bg-card">
               <!-- count total user -->
               <v-container class="px-12 py-8">
@@ -88,21 +95,13 @@
                 <h4 class="font-weight-regular">User</h4>
               </v-container>
             </v-card>
-          </v-col>
-
-          <v-col cols="3">
-            <v-card class="bg-card">
+            <v-card class="bg-card my-3">
               <!-- count total admin -->
               <v-container class="px-12 py-8">
                 <h1>{{ totalAdmins }}</h1>
                 <h4 class="font-weight-regular">Admin</h4>
               </v-container>
             </v-card>
-          </v-col>
-        </v-row>
-        <v-row v-if="activeTab === 'dashboard'" justify="center">
-          <v-col cols="7" lg="7" md="7" sm="12">
-            <UserTable :userData="users" />
           </v-col>
         </v-row>
         <v-row v-else-if="activeTab === 'chats'">
