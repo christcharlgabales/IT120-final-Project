@@ -4,18 +4,15 @@
     <br />
     <br />
     <v-row justify="center" align="center">
-      <v-col cols="6">
-        <img src="@/assets/images/1.png" alt="" width="500" />
-      </v-col>
       <v-col cols="4">
         <login-form class="px-10">
           <template #footer>
             <v-card-text class="text-center mt-3 mb-5">
-              <span >
+              <span class="text-center font-weight-light">
                 Don't have an account?
               </span>
               <span
-                class="text-decoration-none cursor-pointer red"
+                class="text-teal-lighten-2 text-decoration-none cursor-pointer"
                 @click="switchToRegister"
               >
                 Register
@@ -23,6 +20,12 @@
             </v-card-text>
           </template>
         </login-form>
+      </v-col>
+      <v-col cols="1">
+
+      </v-col>
+      <v-col cols="5">
+        <img src="@/assets/images/1.png" alt="" width="500" />
       </v-col>
     </v-row>
   </v-container>
@@ -59,10 +62,6 @@ const switchToRegister = () => (showRegister.value = true);
 }
 
 :deep(.v-overlay__scrim) {
-  background-color: #9575cd !important; /* Change to your desired color */
-}
-
-.red{
-  color: #FE4F5A ;
+  background-color: #4db6ac !important; /* Change to your desired color */
 }
 </style>
