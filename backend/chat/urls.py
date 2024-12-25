@@ -2,6 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import MessageViewSet
 
+# Create a router and register the MessageViewSet
 router = DefaultRouter()
 router.register(r'messages', MessageViewSet)
 

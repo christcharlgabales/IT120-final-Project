@@ -39,12 +39,7 @@
       />
       <v-radio-group v-model="registerAs" row>
         <v-radio
-          label="Superuser"
-          value="superuser"
-          color="#FE4F5A"
-        ></v-radio>
-        <v-radio
-          label="Staff"
+          label="Student"
           value="staff"
           color="#FE4F5A"
         ></v-radio>

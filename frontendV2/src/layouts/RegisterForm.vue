@@ -38,12 +38,10 @@
         required
       />
       <v-radio-group v-model="registerAs" row>
-        <v-radio
-          label="Superuser"
-          value="superuser"
-          color="teal-lighten-2"
-        ></v-radio>
-        <v-radio label="Staff" value="staff" color="teal-lighten-2"></v-radio>
+        <v-radio label="Facilitator" 
+          value="staff" 
+          color="teal-lighten-2">
+        </v-radio>
       </v-radio-group>
       <v-row class="pb-10 pt-2">
         <v-col>

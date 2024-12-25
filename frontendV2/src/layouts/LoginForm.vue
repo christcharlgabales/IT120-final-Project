@@ -1,10 +1,10 @@
 <template>
   <v-card class="bg-card" elevation="8">
-    <h1 class="text-center pt-5 pb-2">Receiver</h1>
+    <h1 class="text-center pt-5 pb-2">Facilitator</h1>
 
     <div class="mb-8 mt-2">
-      <h4 class="text-h6 mb-1">Welcome Back! 👋🏻</h4>
-      <p class="mb-0">Please sign-in to your account and start</p>
+      <h4 class="text-h6 mb-1">Welcome Facilitator! 👋🏻</h4>
+      <p class="mb-0">Please sign-in to your account to start</p>
     </div>
 
     <v-form ref="form" @submit.prevent="handleLogin">

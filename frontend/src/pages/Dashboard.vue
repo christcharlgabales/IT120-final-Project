@@ -2,7 +2,7 @@
   <v-app class="app-container">
     <!-- Top Navigation Bar -->
     <v-app-bar app class="px-5">
-      <v-toolbar-title class="text-h5 font-weight-black">Sender</v-toolbar-title>
+      <v-toolbar-title class="text-h5 font-weight-black">GenAss</v-toolbar-title>
 
       <!-- Navigation Tabs -->
       <v-tabs v-model="activeTab" class="mx-5" color="#FE4F5A">
