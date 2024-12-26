@@ -4,7 +4,7 @@
     <v-app-bar app color="#EEEEEE" class="px-5">
       <!-- App Title -->
       <v-toolbar-title class="text-h5 font-weight-black"
-        >Receiver</v-toolbar-title
+        >GenAss</v-toolbar-title
       >
 
       <!-- Navigation Tabs -->
